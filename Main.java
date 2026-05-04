@@ -9,6 +9,7 @@ public class Main {
         deleteStudent("Alice");
         countStudents();
         searchStudent("Bob");
+        updateStudent("Bob", "Boby");
     }
 
     //Add students
@@ -51,6 +52,18 @@ public class Main {
             System.out.println(name + " found.");
         }else {
             System.out.println(name + " not found.");
+        }
+    }
+
+    //Update Students
+    static void updateStudent(String oldName, String newName) {
+        int index = students.indexOf(oldName);
+
+        if (index != -1) {
+            students.set(index, newName);
+            System.out.println("Updated " + oldName + " to " + newName);
+    }   else {
+            System.out.println(oldName + " not found.");
         }
     }
 }
