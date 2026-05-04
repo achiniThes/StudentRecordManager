@@ -8,6 +8,7 @@ public class Main {
         viewStudents();
         deleteStudent("Alice");
         countStudents();
+        searchStudent("Bob");
     }
 
     //Add students
@@ -34,4 +35,22 @@ public class Main {
     static void countStudents() {
         System.out.println("Total students: " + students.size());
 }
+
+    //Search Student
+    static void searchStudent(String name) {
+        boolean found = false;
+
+        for (String s : students) {
+            if (s.equalsIgnoreCase(name)) {
+                found = true;
+            break;
+            }
+        }
+
+        if (found) {
+            System.out.println(name + " found.");
+        }else {
+            System.out.println(name + " not found.");
+        }
+    }
 }
