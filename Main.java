@@ -5,11 +5,20 @@ public class Main {
         System.out.println("Student Record Manager");
         addStudent("Alice");
         addStudent("Bob");
+        viewStudents();
     }
 
     //Add students
     static void addStudent(String name) {
         students.add(name);
         System.out.println(name + " added.");
+    }
+
+    //View Students
+    static void viewStudents() {
+        System.out.println("Student List:");
+        for (String s : students) {
+            System.out.println(s);
+        }
     }
 }
